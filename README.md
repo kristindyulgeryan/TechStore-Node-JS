@@ -17,4 +17,9 @@
   - [x] Add body parser 
   - [x] Add routes modular router
   
-
+3. Handlebars
+  - [x] Install Express`npm i express-handlebars`
+  - [x] Config hanldebars as view engine
+  - [x] Change views directory
+  - [x] Add resources to views folder
+  
