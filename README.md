@@ -23,4 +23,7 @@
   - [x] Config hanldebars as view engine
   - [x] Change views directory
   - [x] Add resources to views folder
+  - [x] Add home view
+  - [x] Add layout
+ 
   
