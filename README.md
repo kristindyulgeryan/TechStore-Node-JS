@@ -8,6 +8,7 @@
   - [x] Setup Nodmone `npm i -D nodemon`
   - [x] Add start scrypt `npm i -D nodemon`
   - [x] Setup debugging
+  
 2.Express
   - [x] Install Express`npm i express`
   - [x] Setup initial http server
