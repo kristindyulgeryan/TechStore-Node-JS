@@ -25,5 +25,15 @@
   - [x] Add resources to views folder
   - [x] Add home view
   - [x] Add layout
+  - [x] Add partials dir
+
+4. Database
+  - [x] Install mongoose `npm i mongoose`
+  - [x] Setup db connection
+  - [x] Add user model
+5. Register
+6. Login
+7. Logout 
+<!-- 8. Authetication and Authorization  -->
  
   
