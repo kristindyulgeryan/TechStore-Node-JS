@@ -31,7 +31,20 @@
   - [x] Install mongoose `npm i mongoose`
   - [x] Setup db connection
   - [x] Add user model
+
 5. Register
+  - [x] Fix navigation links
+  - [x] Add register view
+  - [x] Add authController
+  - [x] Add register page
+  - [x] Fix register form
+  - [x] Add post register action
+  - [x] Add authService with register
+  - [x] Install bcrypt `npm i bcrypt`
+  - [x] Hash password
+  - [x] Check confirmPassword
+  - [x] Check if user exists
+
 6. Login
 7. Logout 
 <!-- 8. Authetication and Authorization  -->
