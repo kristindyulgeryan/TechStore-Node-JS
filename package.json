@@ -1,0 +1,27 @@
+{
+  "name": "techstore-node-js",
+  "version": "1.0.0",
+  "description": "1.Initialize project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristindyulgeryan/TechStore-Node-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/kristindyulgeryan/TechStore-Node-JS/issues"
+  },
+  "homepage": "https://github.com/kristindyulgeryan/TechStore-Node-JS#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
