@@ -16,6 +16,7 @@
   - [x] Add static middleware
   - [x] Add body parser 
   - [x] Add routes modular router
+  - [x] Add home controller
   
 3. Handlebars
   - [x] Install Express`npm i express-handlebars`
