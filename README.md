@@ -74,5 +74,10 @@
 11. Bonus
   - [x] Dynamic navigation
   - [x] Async jsonwebtoken
-  - [x] ViewBag
   - [x] Dynamic titles
+
+12. TempData
+   - [x] Install express session `npm i express-session`
+   - [x] Config express session
+   - [x] Add temp data middleware
+   - [x] 
