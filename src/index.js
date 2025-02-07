@@ -22,6 +22,9 @@ try {
 // Hanldebars setup 
 app.engine('hbs', hanldebars.engine({
     extname: 'hbs',
+    runtimeOptions: {
+        allowProtoPropertiesByDefault: true,
+    }
 }));
 
 app.set('view engine', 'hbs');

@@ -8,7 +8,6 @@
   - [x] Setup Nodmone `npm i -D nodemon`
   - [x] Add start scrypt `npm i -D nodemon`
   - [x] Setup debugging
-
 2. Express
   - [x] Install Express`npm i express`
   - [x] Setup initial http server
@@ -17,21 +16,19 @@
   - [x] Add body parser 
   - [x] Add routes modular router
   - [x] Add home controller
-  
 3. Handlebars
   - [x] Install Express`npm i express-handlebars`
   - [x] Config hanldebars as view engine
+  - [x] Enable mongo documents to be passed to the view
   - [x] Change views directory
   - [x] Add resources to views folder
   - [x] Add home view
   - [x] Add layout
   - [x] Add partials dir
-
 4. Database
   - [x] Install mongoose `npm i mongoose`
   - [x] Setup db connection
   - [x] Add user model
-
 5. Register
   - [x] Fix navigation links
   - [x] Add register view
@@ -44,7 +41,6 @@
   - [x] Hash password
   - [x] Check confirmPassword
   - [x] Check if user exists
-
 6. Login
   - [x] Add cookie parser `npm i cookie-parser`
   - [x] Add jsonwebtoken `npm i jsonwebtoken`
@@ -61,5 +57,13 @@
   - [x] Autologin on register
 7. Logout 
   - [x] Add get logout action 
- 
+9. Authentication
+  - [x] Add auth middleware
+  - [x] Check if guest
+  - [x] Token verification
+  - [x] Attach user to request
+  - [x] Attach user to handlebars to context
+10. Authorization
+  - [x] Add isAuth middleware
+  - [x] Add route guards authorization 
   
