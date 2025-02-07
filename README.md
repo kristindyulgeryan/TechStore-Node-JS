@@ -46,7 +46,20 @@
   - [x] Check if user exists
 
 6. Login
+  - [x] Add cookie parser `npm i cookie-parser`
+  - [x] Add jsonwebtoken `npm i jsonwebtoken`
+  - [x] Add cookie parser middleware
+  - [x] Add login view
+  - [x] Add get login action
+  - [x] Fix login form
+  - [x] Add post login action
+  - [x] Add login to authService
+  - [x] Validate user
+  - [x] Validate password
+  - [x] Generate token
+  - [x] Return token as cookie
+  - [x] Autologin on register
 7. Logout 
-<!-- 8. Authetication and Authorization  -->
+  - [x] Add get logout action 
  
   
