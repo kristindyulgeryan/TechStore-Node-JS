@@ -25,6 +25,11 @@ app.engine('hbs', hanldebars.engine({
     extname: 'hbs',
     runtimeOptions: {
         allowProtoPropertiesByDefault: true,
+    },
+    helpers: {
+        setTitle(title) {
+            this.pageTitle = title;
+        }
     }
 }));
 
