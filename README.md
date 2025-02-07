@@ -57,13 +57,22 @@
   - [x] Autologin on register
 7. Logout 
   - [x] Add get logout action 
-9. Authentication
+8. Authentication
   - [x] Add auth middleware
   - [x] Check if guest
   - [x] Token verification
   - [x] Attach user to request
   - [x] Attach user to handlebars to context
-10. Authorization
+9. Authorization
   - [x] Add isAuth middleware
   - [x] Add route guards authorization 
-  
+10. Error handling
+  - [x] Add notifications
+  - [x] Extract error message
+  - [x] Add error handling for register
+  - [x] Add error handling for login
+11. Bonus
+  - [x] Dynamic navigation
+  - [x] Async jsonwebtoken
+  - [x] ViewBag
+  - [x] Dynamic titles
