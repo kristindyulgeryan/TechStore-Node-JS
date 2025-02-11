@@ -41,7 +41,9 @@ res.redirect('/devices')
 deviceController.get('/:deviceId/details', async (req,res)=>{
     const deviceId = req.params.deviceId;
     const device= await deviceServcie.getOne(deviceId)
-    res.render('devices/details', {device})
+    const isOwner =  device.owner.equals(req.user?.id)
+
+    res.render('devices/details', {device, isOwner})
 })
 
 
