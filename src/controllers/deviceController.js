@@ -46,6 +46,20 @@ deviceController.get('/:deviceId/details', async (req,res)=>{
     res.render('devices/details', {device, isOwner})
 })
 
+deviceController.get('/:deviceId/prefer', isAuth, async (req, res)=>{
+    // get device id
+    const deviceId = req.params.deviceId;
+    const userId = req.user.id;
 
+    try {
+        // Call service
+    await deviceServcie.prefer(deviceId, userId) 
+    
+    } catch (err) {
+        res.setError(getErrorMessage(err))
+    }
+    // redirect details
+    res.redirect(`/devices/${deviceId}/details`)
+})
 
 export default deviceController;
