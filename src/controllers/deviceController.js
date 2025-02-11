@@ -36,6 +36,14 @@ res.redirect('/devices')
         device : deviceData})
 }
     
+});
+
+deviceController.get('/:deviceId/details', async (req,res)=>{
+    const deviceId = req.params.deviceId;
+    const device= await deviceServcie.getOne(deviceId)
+    res.render('devices/details', {device})
 })
+
+
 
 export default deviceController;
