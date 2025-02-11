@@ -52,7 +52,9 @@ const deviceSchema = new Schema({
     owner: {
         type: Types.ObjectId,
         ref: 'User'
-    }
+    }, 
+}, {
+    timestamps: true,
 })
 
 const Device = model('Device', deviceSchema);
