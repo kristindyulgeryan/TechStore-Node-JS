@@ -62,7 +62,7 @@ deviceController.get('/:deviceId/prefer', isAuth, async (req, res)=>{
     res.redirect(`/devices/${deviceId}/details`)
 });
 
-deviceController.get('/:deviceId/delete', async (req, res)=>{
+deviceController.get('/:deviceId/delete', isAuth, async (req, res)=>{
     const deviceId = req.params.deviceId
 
     try {
@@ -73,6 +73,21 @@ deviceController.get('/:deviceId/delete', async (req, res)=>{
         res.setError(getErrorMessage(err))
         res.redirect(`/devices/${deviceId}/details`)
     }
-} )
+} );
+
+deviceController.get('/:deviceId/edit', isAuth, async(req,res)=>{
+    // get current divece
+    const deviceId = req.params.deviceId
+    const device = await deviceServcie.getOne(deviceId)
+
+    // check if owner
+    if(!device.owner.equals(req.user.id)){
+        res.setError('You are not offer of this offer')
+      return  res.redirect(`/devices/${deviceId}/details`)
+    }
+    // render edit page
+    res.render('devices/edit', {device})
+
+})
 
 export default deviceController;
