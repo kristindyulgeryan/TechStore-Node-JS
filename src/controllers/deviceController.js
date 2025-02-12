@@ -109,4 +109,6 @@ deviceController.post('/:deviceId/edit', isAuth, async( req, res )=>{
    
 })
 
+
+
 export default deviceController;
