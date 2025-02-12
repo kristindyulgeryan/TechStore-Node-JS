@@ -42,8 +42,8 @@ deviceController.get('/:deviceId/details', async (req,res)=>{
     const deviceId = req.params.deviceId;
     const device= await deviceServcie.getOne(deviceId)
     const isOwner =  device.owner.equals(req.user?.id)
-
-    res.render('devices/details', {device, isOwner})
+    const isPreferred = device.preferredList.includes(req.user?.id)
+    res.render('devices/details', {device, isOwner, isPreferred})
 })
 
 deviceController.get('/:deviceId/prefer', isAuth, async (req, res)=>{
