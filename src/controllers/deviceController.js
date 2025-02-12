@@ -88,6 +88,25 @@ deviceController.get('/:deviceId/edit', isAuth, async(req,res)=>{
     // render edit page
     res.render('devices/edit', {device})
 
+});
+
+deviceController.post('/:deviceId/edit', isAuth, async( req, res )=>{
+    // get current divece
+    const deviceId = req.params.deviceId;
+    const userId = req.user.id;
+    const deviceData = req.body;
+   
+    try {
+        await deviceServcie.update(deviceId,userId, deviceData)
+    
+        res.redirect(`/devices/${deviceId}/details`)
+    } catch (err) {
+        res.render('devices/edit', {
+            device: deviceData,
+            error: getErrorMessage(err)
+        })
+    }
+   
 })
 
 export default deviceController;

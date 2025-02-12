@@ -26,6 +26,7 @@ export const prefer = async (deviceId, userId)=> {
 };
 
 export const remove = async (deviceId, userId)=>{
+      // check if owner
     const device = await getOne(deviceId);
 
     if(!device.owner.equals(userId)){
@@ -33,6 +34,15 @@ export const remove = async (deviceId, userId)=>{
     }
 
     return Device.findByIdAndDelete(deviceId)
+};
+
+export const update = async (deviceId, userId, deviceData)=>{
+   const device = await getOne(deviceId)
+
+   if(!device.owner.equals(userId)){
+    throw new Error('Only owner can edit this offer')
+   }
+   return Device.findByIdAndUpdate(deviceId, deviceData, { runValidators: true})
 }
 
  const deviceServcie = {
@@ -42,6 +52,7 @@ export const remove = async (deviceId, userId)=>{
     create,
     prefer,
     remove,
+    update,
 }
 
 export default deviceServcie;
