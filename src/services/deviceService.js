@@ -1,6 +1,18 @@
 import Device from "../models/Device.js"
 
-export const getAll = ()=> Device.find({})
+export const getAll = (filter = {})=> {
+   let query = Device.find({});
+
+   if(filter.owner){
+    query = query.find({ owner: filter.owner })
+   };
+
+   if(filter.preferredBy){
+    query = query.find({ preferredList: filter.preferredBy })
+   };
+
+return query;
+}
 
 export const getLatest = ()=> Device.find({ }).sort({createdAt: 'desc', _id: 'desc'}).limit(3)
 
@@ -43,7 +55,9 @@ export const update = async (deviceId, userId, deviceData)=>{
     throw new Error('Only owner can edit this offer')
    }
    return Device.findByIdAndUpdate(deviceId, deviceData, { runValidators: true})
-}
+};
+
+
 
  const deviceServcie = {
     getAll,
